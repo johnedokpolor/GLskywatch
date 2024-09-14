@@ -105,7 +105,6 @@ overflow:hidden
   margin-top: 10px;
 }
 .auth-form {
-  place-self: center;
   width: 90%;
   max-width: 500px;
   text-align: center;
