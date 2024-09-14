@@ -15,13 +15,16 @@
   justify-content: center;
 }
 .app {
-  min-height: 100vh;
-  display: grid;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
   background: url(./assets/weatherbg.jpg);
   background-size: cover;
 }
 .weather {
-  place-self: center;
   padding: 40px;
   border-radius: 10px;
   max-width: 500px;
