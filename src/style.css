@@ -193,7 +193,7 @@ form .buttons {
     cursor: none;
   }
   .weather {
-    padding:10px
+    padding:30px
 }
   .weather-data {
     flex-direction:column;
