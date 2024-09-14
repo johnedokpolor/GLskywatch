@@ -147,6 +147,7 @@ form .buttons {
   overflow: hidden;
   position: relative;
   outline: 0;
+  border:1px solid white;
   isolation: isolate;
   transition: all .7s ease
 
