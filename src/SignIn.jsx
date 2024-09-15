@@ -5,6 +5,8 @@ import Swal from "sweetalert2"
 import { setDoc, doc } from "firebase/firestore"
 import {Link, useNavigate} from "react-router-dom"
 import google from './assets/google.png'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 
 
 function SignIn() {
@@ -12,6 +14,7 @@ function SignIn() {
         email: "",
         password: ""
     })
+    const [log, setLog] = useState()
     const navigate = useNavigate()
 
     function handleLogChange(event) {
@@ -37,14 +40,7 @@ function SignIn() {
                     console.log(error)
                 }
                 
-                Swal.fire({
-                    text: "Logging In...",
-                    position: "top-right",
-                    showConfirmButton: false,
-                    timer: 3000,
-                    width: 200,
-                    timerProgressBar: true,
-                   }).then(() => {
+               setLog(true).then(() => {
                     Swal.fire({
                         title: `Welcome ${data.user.displayName}`,
                         text: "Stay Dry, Stay Sunny, Stay Informed",
@@ -65,14 +61,7 @@ function SignIn() {
  
     async function handleLogin(e) {
         e.preventDefault();
-        Swal.fire({
-            text: "Logging In...",
-            position: "top-right",
-            showConfirmButton: false,
-            timer: 3000,
-            width: 200,
-            timerProgressBar: true,
-           })
+        setLog(true)
         const {email, password} = user
 
         try {
@@ -105,8 +94,8 @@ function SignIn() {
                 <input type="text" name="email"  onChange={handleLogChange} placeholder="Email" required/>
                 <input type="password" name="password" onChange={handleLogChange} placeholder="Password" required/>
                 <div className="buttons">
+                    <button>{log? <FontAwesomeIcon icon={faSpinner}/> : "Login"}</button>
                     <Link to = "/register"><button className="not">Register</button></Link>
-                    <button>Login</button>
                  </div>
             </form>
                  <img src={google} onClick={handleGoogleLogin} alt="google-sign-in" className="google-sign-in"/>
