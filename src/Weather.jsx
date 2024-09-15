@@ -26,7 +26,7 @@ import {Link, useNavigate} from "react-router-dom"
                 const docSnap = await getDoc(docRef)
                 
           } catch (error) {
-                // navigate('/login')
+                navigate('/login')
             
           }    
         })
