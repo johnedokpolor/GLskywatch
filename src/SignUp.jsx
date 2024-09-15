@@ -75,8 +75,8 @@ function SignUp() {
                  <input type="text" name="email"  onChange={handleRegChange} placeholder="Email" required/>
                  <input type="password" name="password" onChange={handleRegChange} placeholder="Password" required/>
                  <div className="buttons">
-                    <button>Register</button>
                     <Link to = "/login"><button className="not">Login</button></Link>
+                   <button>Register</button>
                  </div>
             </form>
         </div>
