@@ -73,8 +73,6 @@ import {Link, useNavigate} from "react-router-dom"
             Swal.fire({
                 text: 'Running Forecasts',
                 timer: 2000,
-                position: 'top-right',
-                width: 200,
                 timerProgressBar:true,
                 showConfirmButton: false
               }).then(() => {
