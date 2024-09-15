@@ -11,7 +11,7 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   useEffect(() => {
     auth.onAuthStateChanged( async user => {
-        // setIsLoggedIn(user)
+        setIsLoggedIn(user)
     })
 })
 
