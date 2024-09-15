@@ -14,7 +14,7 @@ function SignIn() {
         email: "",
         password: ""
     })
-    const [log, setLog] = useState()
+    const [log, setLog] = useState(false)
     const navigate = useNavigate()
 
     function handleLogChange(event) {
@@ -55,7 +55,7 @@ function SignIn() {
                 
             })
         } catch (error) {
-            
+            setLog(false)
         }
     }
  
@@ -77,6 +77,7 @@ function SignIn() {
             navigate('/weather')
         
         } catch (error) {
+            setLog(false)
             Swal.fire({
                 title: "An Error Occured",
                 text: "Try Again",
