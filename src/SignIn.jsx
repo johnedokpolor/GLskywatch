@@ -105,8 +105,8 @@ function SignIn() {
                 <input type="text" name="email"  onChange={handleLogChange} placeholder="Email" required/>
                 <input type="password" name="password" onChange={handleLogChange} placeholder="Password" required/>
                 <div className="buttons">
-                    <button>Login</button>
                     <Link to = "/register"><button className="not">Register</button></Link>
+                    <button>Login</button>
                  </div>
             </form>
                  <img src={google} onClick={handleGoogleLogin} alt="google-sign-in" className="google-sign-in"/>
