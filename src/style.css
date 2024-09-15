@@ -10,14 +10,7 @@
   box-sizing: border-box;
   font-family: Poppins;
 }
-body {
-/* overflow:hidden; */
-}
 
-.flex { 
-  display: flex;
-  justify-content: center;
-}
 .app {
   height: 100vh;
   display: flex;
@@ -193,8 +186,7 @@ form .buttons {
     cursor: none;
   }
  .weather {
-    width: 95%;
-     border:0;
+    width: 97%;
     padding:25px
   }
   .weather-icon {
